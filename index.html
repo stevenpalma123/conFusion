@@ -45,7 +45,7 @@
                     </li>
                 </ul>
                 <span class="navbar-text">
-                    <a data-toggle="modal" data-target="#loginModal"> <span class="fa fa-sign-in"></span> Login </a>
+                    <a id="loginBtn"> <span class="fa fa-sign-in"></span> Login </a>
                 </span>          
             </div>
         </div>
@@ -181,7 +181,7 @@
                 </div>  
                 <div class="col-12 col-sm-3 align-self-center">
                     <!-- hr might belong here -->
-                    <a role="button" class="btn btn-block nav-link btn-warning" data-toggle="modal" data-target="#reserveModal">Reserve Table</a>
+                    <a role="button" id="reserveTableBtn" class="btn btn-block nav-link btn-warning">Reserve Table</a>
                 </div>
             </div>
         </div>
@@ -385,6 +385,18 @@
                     $("#carouselButton").children("span").addClass('fa-pause');
                 }
             });
+
+            // What triggers login modal
+            $("#loginBtn").click(function () {
+                $('#loginModal').modal('show');
+            });
+
+            // What triggers Rerve Table modal
+            $("#reserveTableBtn").click(function () {
+                $('#reserveModal').modal('show');
+            });
+
+            
         });
     </script>
 
